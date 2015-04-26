@@ -30,6 +30,8 @@ cacheSolve <- function(x, ...) {
         message("getting cached data")
         return(m)
     }
+    
+    # If we got here the inverse isn't cached and we need to solve it (and save the result in the cache)
     theMatrix <- x$get()
     
     m <- solve(theMatrix, ...)
